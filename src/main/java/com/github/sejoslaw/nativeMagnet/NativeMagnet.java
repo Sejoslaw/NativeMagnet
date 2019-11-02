@@ -70,6 +70,10 @@ public class NativeMagnet {
 
         try {
             range = Integer.parseInt(stack.getDisplayName().getFormattedText());
+
+            if (range < 1) {
+                range = 100;
+            }
         } finally {
             return range;
         }
